@@ -5,8 +5,8 @@ ipie stands for **I**\ntelligent **P**\ython-based **I**\maginary-time **E**\vol
 
 ipie inherits a lot of QMC features from pauxy.
 
-.. image:: https://github.com/linusjoonho/ipie/workflows/CI/badge.svg
-    :target: https://github.com/linusjoonho/ipie/workflows/CI/badge.svg
+.. image:: https://github.com/JoonhoLee-Group/ipie/actions/workflows/ci.yml/badge.svg
+    :target: https://github.com/JoonhoLee-Group/ipie/actions/workflows/ci.yml
 
 .. image:: http://readthedocs.org/projects/ipie/badge/?version=latest
     :target: http://ipie.readthedocs.io/en/latest/?badge=latest
@@ -94,6 +94,8 @@ Unit tests and driver tests are included. To run all tests:
 
 More extensive parallel tests are executed in the CI; see `.github/workflows/ci.yml` for details.
 
+.. image:: https://github.com/JoonhoLee-Group/ipie/actions/workflows/ci.yml/badge.svg
+    :target: https://github.com/JoonhoLee-Group/ipie/actions/workflows/ci.yml
 
 Building Optimized C/C++ Code
 -----------------------------
