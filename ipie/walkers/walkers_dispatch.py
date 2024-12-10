@@ -45,9 +45,15 @@ def get_initial_walker(trial: TrialWavefunctionBase) -> numpy.ndarray:
         num_dets = 1
     elif isinstance(trial, ParticleHole):
         initial_walker = numpy.hstack([trial.psi0a, trial.psi0b])
+        # random_walker = numpy.random.random(initial_walker.shape)
+        # initial_walker = initial_walker + random_walker
+        # initial_walker, _ = numpy.linalg.qr(initial_walker)
         num_dets = trial.num_dets
     elif isinstance(trial, ParticleHoleNonChunked):
         initial_walker = numpy.hstack([trial.psi0a, trial.psi0b])
+        # random_walker = numpy.random.random(initial_walker.shape)
+        # initial_walker = initial_walker + random_walker
+        # initial_walker, _ = numpy.linalg.qr(initial_walker)
         num_dets = trial.num_dets
     elif isinstance(trial, NOCI):
         initial_walker = trial.psi[0].copy()

@@ -1272,8 +1272,8 @@ def greens_function_multi_det_wicks_opt_gpu(walker_batch, trial, build_full=Fals
 
     nbasis = walker_batch.Ga.shape[-1]
 
-    walker_batch.Ga.fill(0.0 + 0.0j)
-    walker_batch.Gb.fill(0.0 + 0.0j)
+    walker_batch.Ga = xp.zeros_like(walker_batch.Ga)
+    walker_batch.Gb = xp.zeros_like(walker_batch.Gb)
 
     # Build reference Green's functions and overlaps
     # Note abuse of naming convention this is really theta for the reference
@@ -1317,8 +1317,8 @@ def greens_function_multi_det_wicks_opt_gpu(walker_batch, trial, build_full=Fals
     walker_batch.G0b = G0b
     walker_batch.Q0a = xp.eye(nbasis)[None, :] - G0a
     walker_batch.Q0b = xp.eye(nbasis)[None, :] - G0b
-    walker_batch.CIa.fill(0.0 + 0.0j)
-    walker_batch.CIb.fill(0.0 + 0.0j)
+    walker_batch.CIa = xp.zeros_like(walker_batch.CIa)
+    walker_batch.CIb = xp.zeros_like(walker_batch.CIb)
 
     dets_a_full, dets_b_full = compute_determinants_batched(
         walker_batch.Ghalfa, walker_batch.Ghalfb, trial
